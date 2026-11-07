@@ -1,140 +1,113 @@
 # Wazuh SIEM Home Lab
 
-A hands-on home lab documenting the installation of Wazuh on an Ubuntu
-virtual machine and the onboarding of a Windows endpoint for security
-monitoring.
+A hands-on cybersecurity project demonstrating the deployment of Wazuh SIEM on Ubuntu and the integration of a Windows endpoint for security monitoring.
 
-## Project overview
+## Project Overview
 
-This project demonstrates a basic Wazuh SIEM deployment and endpoint
-integration. The work documented in this repository includes:
+This project demonstrates practical experience implementing a Security Information and Event Management (SIEM) solution using Wazuh.
 
--   Installing Wazuh on an Ubuntu virtual machine.
--   Accessing the Wazuh web dashboard.
--   Installing the Wazuh agent on a Windows endpoint.
--   Registering the Windows agent with the Wazuh manager.
--   Verifying that the endpoint is connected and running.
--   Viewing endpoint events in the Wazuh dashboard, including File
-    Integrity Monitoring (FIM) events.
+The lab covers:
 
-## Lab environment
+- Wazuh installation on Ubuntu.
+- Wazuh dashboard deployment and access.
+- Windows endpoint agent installation.
+- Agent registration and authentication.
+- Endpoint connectivity verification.
+- Security event monitoring.
+- File Integrity Monitoring (FIM).
 
-  -----------------------------------------------------------------------
-  Component                           Role
-  ----------------------------------- -----------------------------------
-  Ubuntu virtual machine              Hosts the Wazuh manager and
-                                      dashboard
+## Lab Environment
 
-  Windows virtual machine/device      Endpoint monitored by the Wazuh
-                                      agent
+| Component | Purpose |
+|---|---|
+| Ubuntu Virtual Machine | Hosts the Wazuh installation and manager services |
+| Wazuh Dashboard | Centralised security monitoring interface |
+| Windows Endpoint | Monitored device running the Wazuh agent |
+| Wazuh Agent | Collects and forwards endpoint security events |
 
-  Wazuh                               SIEM and endpoint monitoring
-                                      platform
-  -----------------------------------------------------------------------
+## Implementation Walkthrough
 
-> The accompanying installation document contains the screenshots and
-> walkthrough captured during this lab.
+### 1. Wazuh Installation on Ubuntu
 
-## Implementation walkthrough
+Installed Wazuh on an Ubuntu virtual machine using the Wazuh installation assistant.
 
-### 1. Install Wazuh on Ubuntu
+### 2. Dashboard Deployment
 
-Wazuh was installed on the Ubuntu virtual machine using the Wazuh
-installation assistant. The installation process deployed the components
-required for the dashboard-based lab.
+Accessed the Wazuh web dashboard and verified successful authentication.
 
-### 2. Access the Wazuh dashboard
+### 3. Windows Agent Installation
 
-After installation, the Wazuh dashboard was opened in a web browser and
-a successful login was verified.
+Installed the Wazuh agent on a Windows endpoint to enable security monitoring.
 
-### 3. Install the Windows agent
+### 4. Agent Registration
 
-The Wazuh agent was installed on the Windows endpoint.
+Configured the Windows agent to communicate with the Ubuntu-based Wazuh manager.
 
-### 4. Register the endpoint
+### 5. Agent Connectivity Verification
 
-The Ubuntu Wazuh manager address and the agent
-registration/authentication information were configured on the Windows
-agent so that it could communicate with the manager.
+Verified that the Windows endpoint was successfully enrolled and appeared as active in the Wazuh dashboard.
 
-### 5. Verify agent connectivity
+### 6. Security Event Monitoring
 
-The Windows endpoint appeared in the Wazuh dashboard as an enrolled,
-active agent.
+Accessed endpoint events through the Wazuh dashboard and reviewed available security telemetry, including File Integrity Monitoring activity.
 
-### 6. Review endpoint events
+## Skills Demonstrated
 
-The lab documentation includes a view of events from the Windows
-endpoint in the Wazuh dashboard, including file integrity monitoring
-activity.
+- SIEM Implementation
+- Ubuntu/Linux Administration
+- Windows Endpoint Management
+- Wazuh Agent Deployment
+- Security Event Monitoring
+- File Integrity Monitoring (FIM)
+- Log Analysis
+- Technical Documentation
+- Troubleshooting
 
-## Repository contents
+## Technologies Used
 
-``` text
-wazuh-siem-home-lab/
-├── README.md
-├── Documentation/
-│   ├── Installation-of-Wazuh-in-Ubuntu-VM.docx
-│   └── Installation-of-Wazuh-in-Ubuntu-VM.pdf
-└── Screenshots/
-```
-
-Add the `Documentation/` and `Screenshots/` folders and their files as
-you upload them. If you use different filenames, update the links and
-folder tree in this README.
-
-## Skills demonstrated
-
--   SIEM deployment fundamentals
--   Ubuntu/Linux administration
--   Windows endpoint onboarding
--   Wazuh agent registration and connectivity verification
--   Security event monitoring
--   File Integrity Monitoring (FIM)
--   Technical documentation and troubleshooting
+- Wazuh SIEM
+- Ubuntu Linux
+- Microsoft Windows
+- Virtual Machines
+- Wazuh Agent
+- File Integrity Monitoring
 
 ## Documentation
 
--   [Wazuh installation and Windows agent onboarding guide
-    (PDF)](Documentation/Installation-of-Wazuh-in-Ubuntu-VM.pdf)
--   [Wazuh installation and Windows agent onboarding guide
-    (Word)](Documentation/Installation-of-Wazuh-in-Ubuntu-VM.docx)
+**Installation and Implementation Guide**
 
-## Security and privacy
+[View Wazuh SIEM Installation Guide (Word)](./Documentation/Wazuh-SIEM-Home-Lab-Installation-Guide%20%281%29.docx)
 
-Before making this repository public, review every document and
-screenshot. Remove or permanently redact:
+## Repository Structure
 
--   Passwords, installation credentials, authentication keys and tokens.
--   Private or public IP addresses, hostnames, usernames or other
-    environment details that you do not intend to disclose.
--   Any personal or organisation-sensitive information.
+```text
+kagis-gif/
+│
+├── README.md
+│
+└── Documentation/
+    └── Wazuh-SIEM-Home-Lab-Installation-Guide (1).docx
+```
 
-Do not publish agent authentication keys or installation passwords.
-Redactions should be applied to the source document and screenshots, not
-merely covered with shapes that can be removed.
+## Security Considerations
 
-## Project status
+Before publishing this project:
 
-The documented lab covers Wazuh installation, dashboard access, Windows
-agent onboarding and endpoint event visibility. Additional detections,
-alert testing and response workflows can be added as the lab develops.
+- Remove passwords and installation credentials.
+- Redact agent authentication keys and tokens.
+- Review screenshots for sensitive network information.
+- Avoid publishing confidential organisational information.
 
-------------------------------------------------------------------------
+## Project Outcome
 
-**Author:** Kagiso Lebambo\
+Successfully documented the installation of Wazuh on Ubuntu, dashboard access, Windows endpoint onboarding and endpoint event visibility.
+
+This project demonstrates practical SIEM deployment and endpoint monitoring experience in a virtualised lab environment.
+
+---
+
+**Author:** Kagiso Lebambo
+
 **Project:** Wazuh SIEM Home Lab
 
-## Skills and Associated Projects
-
-| Skill | Associated Project |
-|---|---|
-| SIEM Implementation | [Wazuh SIEM Home Lab](Documentation/Wazuh-SIEM-Home-Lab-Installation-Guide.docx) |
-| Linux Administration | [Ubuntu Wazuh Installation](Documentation/Wazuh-SIEM-Home-Lab-Installation-Guide.docx) |
-| Endpoint Monitoring | [Windows Agent Integration](Documentation/Wazuh-SIEM-Home-Lab-Installation-Guide.docx) |
-| Security Event Analysis | [Wazuh Event Monitoring](Documentation/Wazuh-SIEM-Home-Lab-Installation-Guide.docx) |
-
-## Project Repository
-
-[View my Wazuh SIEM Home Lab on GitHub](https://github.com/kagis-gif/kagis-gif)
+**GitHub:** https://github.com/kagis-gif/kagis-gif
