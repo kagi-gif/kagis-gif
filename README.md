@@ -110,4 +110,4 @@ This project demonstrates practical SIEM deployment and endpoint monitoring expe
 
 **Project:** Wazuh SIEM Home Lab
 
-**GitHub:** https://github.com/kagis-gif/kagis-gif
+**GitHub:** https://github.com/kagi-gif/kagis-gif
